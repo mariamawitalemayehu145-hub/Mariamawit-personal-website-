@@ -1,0 +1,417 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #253746;
+    line-height: 1.7;
+}
+
+:root {
+    --primary: #102b35;
+    --secondary: #0c8b80;
+    --accent: #61c5b5;
+    --light: #ffffff;
+    --background: #f5f8fa;
+}
+
+/* HEADER AND NAVIGATION */
+
+.hero {
+    background: var(--primary);
+    color: var(--light);
+    padding: 25px 8% 75px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+.logo span,
+footer h2 span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 80px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.welcome,
+.section-label {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.hero-text h1 span {
+    color: var(--accent);
+}
+
+.hero-text h2 {
+    font-size: 23px;
+    color: #b5d8d5;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    max-width: 520px;
+    color: #d1e0e2;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #31535b;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 75px 8%;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin: 8px 0 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--secondary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-card p + p {
+    margin-top: 15px;
+}
+
+/* HOBBY SECTION */
+
+.hobby {
+    background: #eaf4f2;
+}
+
+.hobby-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.hobby-content h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.code-box {
+    background: #102b35;
+    color: #a5e7d9;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.code-heading {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.code-box pre {
+    margin: 15px 0;
+    white-space: pre-wrap;
+}
+
+.code-box code {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+.code-footer {
+    color: white;
+    border-top: 1px solid #45616a;
+    padding-top: 12px;
+}
+
+.skills-heading {
+    margin: 45px 0 20px;
+    color: var(--primary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card span {
+    font-size: 35px;
+}
+
+.skill-card h3 {
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+/* GOALS SECTION */
+
+.goals-intro {
+    margin-bottom: 20px;
+}
+
+.goals-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.goals-card h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.goals-card ol {
+    padding-left: 25px;
+}
+
+.goals-card li {
+    margin: 10px 0;
+}
+
+.quote {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    margin-top: 25px;
+    border-radius: 12px;
+    font-size: 19px;
+    font-style: italic;
+    text-align: center;
+}
+
+.quote span {
+    display: block;
+    color: var(--accent);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* INSPIRATION SECTION */
+
+.inspiration {
+    background: #eaf4f2;
+}
+
+.inspiration-list {
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+.inspiration-list li {
+    margin: 8px 0;
+}
+
+.resources {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.resources h3 {
+    color: var(--primary);
+}
+
+.resources a {
+    display: inline-block;
+    margin: 15px 15px 0 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.resources a:hover {
+    color: #07564f;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    color: #b5c9ca;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .hobby-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .nav-links {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-image img {
+        height: 200px;
+    }
+}
